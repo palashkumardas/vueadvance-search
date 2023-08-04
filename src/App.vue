@@ -27,7 +27,7 @@ const activeIndex = ref(0)
       </div>
       <div>
         <div class="flex flex-col">
-          <input class=" my-3" type="text"  placeholder="name" >
+          <input class=" my-3" type="text"  :placeholder="key" v-model="persons[activeIndex][key]" v-for="(value,key,index2) in persons[activeIndex]" :key="index2">
         </div>
       </div>
     </div>
